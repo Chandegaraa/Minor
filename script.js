@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Featured content
     const featuredList = document.getElementById('featured-list');
     const featuredItems = [
-        Poem 1: Beauty',
-'Poem 2: Colors of Life',
+
+'Poem : Colors of Life',
 'Article 1: Importance of Science and Technology',
 'Article 2: Changes in Society'
     ];
