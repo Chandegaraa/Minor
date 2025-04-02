@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Featured content
     const featuredList = document.getElementById('featured-list');
     const featuredItems = [
-        'कविता १: सुंदरता',
-        'कविता २: जीवनाचे रंग',
-        'लेख १: विज्ञान आणि तंत्रज्ञानाचे महत्त्व',
-        'लेख २: समाजातील बदल'
+        Poem 1: Beauty',
+'Poem 2: Colors of Life',
+'Article 1: Importance of Science and Technology',
+'Article 2: Changes in Society'
     ];
  
     featuredItems.forEach(item => {
