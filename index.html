@@ -1,64 +1,47 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Poeticlenss</title>
-<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Glegoo&family=Kalam&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" defer></script>
-<script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poeticlenss</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Glegoo&family=Kalam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-<header>
-<div class="header-content">
-<h1 class="animated-title">Book Raider</h1>
-<p class="animated-subtitle">Akshay Chandegara</p>
-</div>
-</header>
-<nav>
-<a href="index.html"><i class="fas fa-home"></i> HomePage</a>
-<a href="poems.html"><i class="fas fa-feather-alt"></i> Poem</a>
-<a href="articles.html"><i class="fas fa-book-open"></i> </a>
-<a href="about.html"><i class="fas fa-user"></i> About</a>
-<button id="dark-mode-toggle">Toggle Dark Mode</button>
-</nav>
-<div class="search-container">
-<input type="text" id="search-bar" placeholder="Search...">
-<button onclick="searchContent()">Search</button>
-</div>
-<div class="container">
-<div class="book-carousel">
-<img src="book1.jpg" alt="Poem Book 1" class="active">
-<img src="book2.jpg" alt="Poem Book 2">
-<img src="book3.jpg" alt="Poem Book 3">
-</div>
-<h2 class="section-title">About Poems</h2>
-<p class="description">                                        Welcome to our Poem world.Enjoy the beauty of words and the depth of thought .</p>
-<div class="featured-content">
-<h3>Highlight</h3>
-<ul id="featured-list">
-<!-- This will be populated by JavaScript -->
-</ul>
-</div>
-<div class="social-media">
-<h3>Follow Us</h3>
-<a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-<a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-<a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-</div>
-<div class="contact-form">
-<h3>Contact Us</h3>
-<form id="contact-form">
-<input type="text" id="contact-name" placeholder="Your Name" required>
-<input type="email" id="contact-email" placeholder="Your Email" required>
-<textarea id="contact-message" placeholder="Your Message" required></textarea>
-<button type="submit">Send</button>
-</form>
-</div>
-</div>
-<footer>
-<p>© 2025 Poeticlenss </p>
-</footer>
+    <header>
+        <div class="header-content">
+            <h1 class="animated-title">Book Raider</h1>
+            <p class="animated-subtitle">Akshay Chandegara</p>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> HomePage</a>
+        <a href="poems.html"><i class="fas fa-feather-alt"></i> Poem</a>
+        <a href="articles.html"><i class="fas fa-book-open"></i> Articles</a>
+        <a href="about.html"><i class="fas fa-user"></i> About</a>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </nav>
+    <div class="container">
+        <div class="book-carousel">
+            <img src="book1.jpg" alt="Poem Book 1" class="active">
+            <img src="book2.jpg" alt="Poem Book 2">
+            <img src="book3.jpg" alt="Poem Book 3">
+        </div>
+
+        <!-- ⚠️ ADD THIS NEW SECTION -->
+        <div class="welcome-message">
+            <p>Welcome to our Poem world. Enjoy the beauty of words and the depth of thought.</p>
+        </div>
+        <!-- ⚠️ END OF NEW SECTION -->
+
+        <div class="featured-content">
+            <!-- Rest of the content -->
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 Poeticlenss</p>
+    </footer>
 </body>
 </html>
