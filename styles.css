@@ -1,40 +1,22 @@
-/* Add these new styles to your CSS file */
-.welcome-box {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 30px;
-    text-align: center;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.welcome-message {
-    font-size: 1.4em;
-    color: #333;
-    line-height: 1.6;
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Glegoo', serif;
+    box-sizing: border-box;
 }
 
-/* Dark mode support */
-body.dark-mode .welcome-box {
-    background-color: #1e1e1e;
+body {
+    font-family: 'Glegoo', 'Kalam', 'Rozha One', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
 }
 
-body.dark-mode .welcome-message {
-    color: #ffffff;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .welcome-box {
-        margin: 20px;
-        padding: 20px;
-    }
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('header-bg.jpg') no-repeat center center/cover;
+    color: white;
+    height: 250px;
     
-    .welcome-message {
-        font-size: 1.2em;
-    }
-}
