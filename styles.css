@@ -1,38 +1,100 @@
-/* General Styles */
-body {
-    font-family: 'Glegoo', 'Kalam', 'Rozha One', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    text-align: center;
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('header-bg.jpg') no-repeat center center/cover;
-    color: white;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.header-content {
+/* Carousel container with reduced size */
+.book-carousel-container {
+    width: 100%;
+    max-width: 600px; /* Reduced from 800px */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.book-carousel {
     position: relative;
-    z-index: 2;
+    height: 250px; /* Reduced from 300px */
 }
 
-/* Navigation */
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-    padding: 10px 0;
+.book-carousel img {
+    width: 100%;
+    height: 250px; /* Reduced from 300px */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 5px;
-    border-
+.book-carousel img.active {
+    opacity: 1;
+}
+
+/* Welcome message styling - centered and prominent */
+.welcome-message {
+    text-align: center;
+    padding: 40px 0;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+}
+
+.welcome-message p {
+    font-size: 1.4em;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    font-family: 'Glegoo', serif;
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.welcome-message::before,
+.welcome-message::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100px;
+    background: #007bff;
+    margin: 20px auto;
+}
+
+/* Content sections layout */
+.content-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+/* Contact form styling */
+.contact-section {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height
