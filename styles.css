@@ -1,22 +1,330 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styles */
 body {
     font-family: 'Glegoo', 'Kalam', 'Rozha One', sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
-    line-height: 1.6;
 }
-
-/* Header Styles */
+ 
 header {
     text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('header-bg.jpg') no-repeat center center/cover;
+    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('header-bg.jpg') no-repeat center center/cover;
     color: white;
-    height: 250px;
-    
+    animation: fadeIn 2s ease-in-out;
+}
+ 
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+ 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+ 
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    flex-wrap: wrap;
+}
+ 
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+ 
+nav a:hover {
+    background-color: #575757;
+}
+ 
+#dark-mode-toggle {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 14px;
+}
+ 
+#dark-mode-toggle:hover {
+    background-color: #0056b3;
+}
+ 
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+ 
+#search-bar {
+    padding: 10px;
+    width: 70%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+ 
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+ 
+button:hover {
+    background-color: #0056b3;
+}
+ 
+.container {
+    padding: 20px;
+}
+ 
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Rozha One', serif;
+    animation: slideIn 1s ease-in-out;
+}
+ 
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+ 
+.book-carousel {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+ 
+.book-carousel img {
+    max-width: 100%;
+    height: auto;
+    display: none;
+    transition: opacity 1s;
+}
+ 
+.book-carousel img.active {
+    display: block;
+    opacity: 1;
+}
+ 
+.book-carousel img:not(.active) {
+    opacity: 0;
+}
+ 
+.featured-content {
+    text-align: center;
+}
+ 
+.featured-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+ 
+.featured-content li {
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+ 
+.featured-content li:hover {
+    transform: scale(1.05);
+}
+ 
+.social-media {
+    text-align: center;
+    margin: 20px 0;
+}
+ 
+.social-media a {
+    color: #007bff;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+ 
+.social-media a:hover {
+    color: #0056b3;
+}
+ 
+.contact-form {
+    text-align: center;
+    margin: 20px 0;
+}
+ 
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+ 
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+ 
+#contact-form button:hover {
+    background-color: #0056b3;
+}
+ 
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+ 
+/* Poem and Article Styles */
+.poem, .article {
+    font-family: 'Kalam', cursive;
+    font-size: 19px; /* Increased font size */
+    line-height: 1.8; /* Adjusted line height */
+    color: #333;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #007bff;
+    border-radius: 4px;
+}
+ 
+/* Scroll Animations */
+.scroll-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+ 
+.scroll-in.scrolled {
+    opacity: 1;
+    transform: none;
+}
+ 
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+ 
+body.dark-mode nav {
+    background-color: #1e1e1e;
+}
+ 
+body.dark-mode nav a {
+    color: #ffffff;
+}
+ 
+body.dark-mode nav a:hover {
+    background-color: #333333;
+}
+ 
+body.dark-mode footer {
+    background-color: #1e1e1e;
+}
+ 
+body.dark-mode #dark-mode-toggle {
+    background-color: #ffffff;
+    color: #000000;
+}
+ 
+body.dark-mode #dark-mode-toggle:hover {
+    background-color: #cccccc;
+}
+ 
+body.dark-mode .poem, body.dark-mode .article {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-left: 4px solid #ffffff;
+}
+ 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+ 
+    nav a {
+        padding: 10px;
+        border-top: 1px solid #575757;
+    }
+ 
+    .container {
+        padding: 10px;
+    }
+ 
+    .book-carousel {
+        flex-direction: column;
+    }
+ 
+    .poem-list article,
+    .article-list article {
+        padding: 10px;
+    }
+ 
+    .poem, .article {
+        padding: 10px;
+    }
+ 
+    .about-image {
+        flex-direction: column;
+    }
+ 
+    .search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    #search-bar {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}
+ 
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+ 
+    .section-title {
+        font-size: 1.5em;
+    }
+ 
+    .description {
+        font-size: 1em;
+    }
+ 
+    .poem-list article,
+    .article-list article {
+        padding: 8px;
+    }
+ 
+    .poem, .article {
+        padding: 8px;
+    }
+ 
+    .about-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+}
