@@ -1,29 +1,32 @@
-nav ul {
+.vertical-nav {
     display: flex;
-    justify-content: center;
-    list-style: none;
+    flex-direction: column;
+    width: 180px; /* Adjust as needed */
+    margin: 0 auto 20px auto;
     padding: 0;
-    margin: 0;
+    list-style: none;
 }
 
-nav ul li {
-    margin-right: 20px;
+.vertical-nav li {
+    margin: 0 0 8px 0;
 }
 
-nav ul li:last-child {
-    margin-right: 0;
+.vertical-nav li:last-child {
+    margin-bottom: 0;
 }
 
-nav ul a {
+.vertical-nav a {
     color: white;
+    background: #333;
+    padding: 12px;
+    border-radius: 4px;
+    text-align: left;
     text-decoration: none;
-    padding: 14px 20px;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
     display: block;
-    text-align: center;
 }
 
-nav ul a:hover,
-nav ul a.active {
-    background-color: #575757;
+.vertical-nav a:hover,
+.vertical-nav a.active {
+    background: #575757;
 }
