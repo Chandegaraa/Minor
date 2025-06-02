@@ -1,37 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About me</title>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Glegoo&family=Kalam&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" defer></script>
+<script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>About Me</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="poems.html">Poems</a></li>
-                <li><a href="articles.html">Articles</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Biography</h2>
-            <p>This is the biography section where you can include information about yourself.</p>
-        </section>
-        <section>
-            <h2>Experience</h2>
-            <p>This section can be used to detail your professional experience and achievements.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Akshay Chandegara</p>
-    </footer>
-    <script src="script.js"></script>
+<header>
+<div class="header-content">
+<h1 class="animated-title">About me</h1>
+<p class="animated-subtitle">Learn more about Akshay Chandegara.</p>
+</div>
+</header>
+<nav>
+<a href="index.html"><i class="fas fa-home"></i> Home</a>
+<a href="poems.html"><i class="fas fa-feather-alt"></i> Poem</a>
+<a href="articles.html"><i class="fas fa-book-open"></i> </a>
+<a href="about.html"><i class="fas fa-user"></i> About Me</a>
+</nav>
+<div class="search-container">
+<input type="text" id="search-bar" placeholder="Search...">
+<button onclick="searchContent()">Search</button>
+</div>
+<div class="container">
+<h2 class="section-title">Akshay Chandegara</h2>
+<p class="description">I am Akshay Chandegara, a writer and poet. In my poems and articles, I discuss various aspects of life. Through my writing, I inspire readers to think and make positive changes in their lives.</p>
+<div class="about-image">
+<img src="rahul.jpg" alt="Akshay Chandegara">
+</div>
+</div>
+<footer>
+<p>© 2025 Poeticlenss.</p>
+</footer>
 </body>
 </html>
